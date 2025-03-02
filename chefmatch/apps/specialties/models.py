@@ -5,3 +5,6 @@ class Specialty(models.Model):
 
     def __str__(self):
         return self.description
+    
+    class Meta:
+        db_table = 'specialty'
