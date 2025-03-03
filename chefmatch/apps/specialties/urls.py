@@ -4,6 +4,7 @@ from .views import SpecialtyViewSet
 
 router = DefaultRouter()
 router.register(r'specialties', SpecialtyViewSet)
+router.register(r'chefs', ChefViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
