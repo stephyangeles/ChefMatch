@@ -5,3 +5,4 @@ class SpecialtySerializer(serializers.ModelSerializer):
     class Meta:
         model = Specialty
         fields = '__all__'
+
