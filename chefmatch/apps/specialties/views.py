@@ -42,3 +42,7 @@ def item_detail(request, pk):
 class SpecialtyViewSet(viewsets.ModelViewSet):
     queryset = Specialty.objects.all()
     serializer_class = SpecialtySerializer
+
+class ChefViewSet(viewsets.ModelViewSet):
+    queryset = Chef.objects.all()
+    serializer_class = ChefSerializer
