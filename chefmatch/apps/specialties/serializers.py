@@ -1,4 +1,4 @@
-from .models import Specialty, Chef
+from .models import Specialty, Chef, User
 from rest_framework import serializers
 
 class SpecialtySerializer(serializers.ModelSerializer):
@@ -9,4 +9,9 @@ class SpecialtySerializer(serializers.ModelSerializer):
 class ChefSerializer(serializers.ModelSerializer):
     class Meta:
         model = Chef
-        fields = ['id', 'name', 'expertise', 'rating']
+        fields = '__all__'
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
