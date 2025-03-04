@@ -1,4 +1,4 @@
-from .models import Specialty, Chef, User, Reservation
+from .models import Specialty, Chef, User, Reservation, GeneralLedger
 from rest_framework import serializers
 
 class SpecialtySerializer(serializers.ModelSerializer):
@@ -21,3 +21,7 @@ class ReservationSerializer(serializers.ModelSerializer):
         model = Reservation
         fields = '__all__'
 
+class GeneralLedgerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GeneralLedger
+        fields = '__all__'
