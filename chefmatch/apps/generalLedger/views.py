@@ -1,18 +1,18 @@
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Specialty, Reservation
-from .serializers import SpecialtySerializer, ReservationSerializer
+from .models import GeneralLedger
+from .serializers import GeneralLedgerSerializer
 
 @api_view(['GET', 'POST'])
 def item_list(request):
     if request.method == 'GET':
-        items = Specialty.objects.all()
-        serializer = SpecialtySerializer(items, many=True)
+        items = GeneralLedger.objects.all()
+        serializer = GeneralLedgerSerializer(items, many=True)
         return Response(serializer.data)
     
     elif request.method == 'POST':
-        serializer = SpecialtySerializer(data=request.data)
+        serializer = GeneralLedgerSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -21,16 +21,16 @@ def item_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 def item_detail(request, pk):
     try:
-        item = Specialty.objects.get(pk=pk)
-    except Specialty.DoesNotExist:
+        item = GeneralLedger.objects.get(pk=pk)
+    except GeneralLedger.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = SpecialtySerializer(item)
+        serializer = GeneralLedgerSerializer(item)
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        serializer = SpecialtySerializer(item, data=request.data)
+        serializer = GeneralLedgerSerializer(item, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -39,11 +39,7 @@ def item_detail(request, pk):
     elif request.method == 'DELETE':
         item.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-class SpecialtyViewSet(viewsets.ModelViewSet):
-    queryset = Specialty.objects.all()
-    serializer_class = SpecialtySerializer
 
-
-class ReservationViewSet(viewsets.ModelViewSet):
-    queryset = Reservation.objects.all()
-    serializer_class = ReservationSerializer
+class GeneralLedgerViewSet(viewsets.ModelViewSet):
+    queryset = GeneralLedger.objects.all()
+    serializer_class = GeneralLedgerSerializer
