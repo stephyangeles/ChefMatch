@@ -1,8 +1,8 @@
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Specialty, Chef
-from .serializers import SpecialtySerializer, ChefSerializer, UserSerializer
+from .models import Specialty, Chef, User, Reservation
+from .serializers import SpecialtySerializer, ChefSerializer, UserSerializer, ReservationSerializer,
 
 @api_view(['GET', 'POST'])
 def item_list(request):
@@ -50,3 +50,7 @@ class ChefViewSet(viewsets.ModelViewSet):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+class ReservationViewSet(viewsets.ModelViewSet):
+    queryset = Reservation.objects.all()
+    serializer_class = ReservationSerializer
