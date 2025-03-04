@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import SpecialtyViewSet
+from .views import SpecialtyViewSet, ChefViewSet
 
 router = DefaultRouter()
 router.register(r'specialties', SpecialtyViewSet)
