@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS reservations (
     confirmed_at TIMESTAMP,
     canceled_at TIMESTAMP,
     completed_at TIMESTAMP,
-    chef_id INT NOT NULL,
+    chefs_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (chefs_id) REFERENCES chefs(id) ON DELETE CASCADE
 );
