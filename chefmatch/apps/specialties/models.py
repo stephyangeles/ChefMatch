@@ -8,31 +8,4 @@ class Specialty(models.Model):
     
     class Meta:
         db_table = 'specialty'
-        
-class Reservation(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
-    date = models.DateTimeField()
-    location = models.CharField(max_length=255)
-    confirmed_at = models.DateTimeField(blank=True, null=True)
-    canceled_at = models.DateTimeField(blank=True, null=True)
-    completed_at = models.DateTimeField(blank=True, null=True)
 
-    def __str__(self):
-        return f"Reservation {self.id} - {self.user.name} - {self.chef.name}"
-
-    class Meta:
-        db_table = 'reservations'
-
-
-class GeneralLedger(models.Model):
-    reservation = models.OneToOneField(Reservation, on_delete=models.CASCADE)
-    amount = models.DecimalField(max_digits=10, decimal_places=2)
-    payment_method = models.CharField(max_length=50)
-    state = models.CharField(max_length=50)
-
-    def __str__(self):
-        return f"Ledger {self.id} - Reservation {self.reservation.id}"
-
-    class Meta:
-        db_table = 'general_ledger'

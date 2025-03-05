@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .views import GeneralLedgerViewSet
 
 router = DefaultRouter()
-router.register(r'ledger', GeneralLedgerViewSet)
+router.register(r'admin', GeneralLedgerViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
