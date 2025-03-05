@@ -41,7 +41,3 @@ def item_detail(request, pk):
         item.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
-class ReservationViewSet(viewsets.ModelViewSet):
-    queryset = Reservation.objects.all()
-    serializer_class = ReservationSerializer

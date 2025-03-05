@@ -1,4 +1,5 @@
 from django.db import models
+from apps.reservations.models import Reservation
 
 class Specialty(models.Model):
     description = models.CharField(max_length=255)
