@@ -1,0 +1,46 @@
+INSERT INTO users (id, name, email, telephone) VALUES
+(1, 'Elena García', 'elena@example.com', '3216540987'),
+(2, 'Martín Rodríguez', 'martin@example.com', '7418529630'),
+(3, 'Sofía Ramírez', 'sofia@example.com', '1597534862'),
+(4, 'Diego Herrera', 'diego@example.com', '3692581470'),
+(5, 'Lucía Moreno', 'lucia@example.com', '8527419630');
+Tabla: specialty
+sql
+Copy
+Edit
+INSERT INTO specialty (id, description) VALUES
+(1, 'Coreana),
+(2, 'Mediterranea'),
+(3, 'Japonesa'),
+(4, 'China'),
+(5, 'Mexicana');
+Tabla: chefs
+sql
+Copy
+Edit
+INSERT INTO chefs (id, specialty_id, name, bio) VALUES
+(4, 4, 'Li Song', 'Li Song, maestro de la cocina coreana, fusiona tradición y creatividad. Sus platos auténticos de kimchi, bulgogi y más, reflejan el amor por su cultura y el respeto a los ingredientes frescos.'),
+(5, 5, 'Maria Gonzales', 'Especialista en cocina mediterránea, crea platos llenos de frescura y sabor, destacando el uso de aceite de oliva, hierbas frescas y mariscos para un viaje culinario único.'),
+(6, 6, 'Hiroshi Tanaka', 'Hiroshi Tanaka, experto en cocina japonesa, fusiona técnicas ancestrales con su creatividad. Con su dominio en sushi y tempura, ofrece una experiencia auténtica que respeta la simplicidad japonesa.'),
+(7, 7, 'Juan Li', 'maestro de la cocina china, destaca por sus sabores vibrantes y platos como el pato pekinés y dim sum. Su pasión por las especias y los ingredientes frescos ofrece una experiencia única.'),
+(8, 8, 'Ana Martinez', 'Experta en cocina mexicana, transforma ingredientes tradicionales como el maíz y el chile en platos llenos de sabor y color, preservando la autenticidad y el espíritu de México.');
+Tabla: reservations
+sql
+Copy
+Edit
+INSERT INTO reservations (id, user_id, chef_id, reservation_date, location, status) VALUES
+(4, 4, 4, '20250405', 'Sevilla', 'Confirmed'),
+(5, 5, 5, '20250412', 'Bilbao', 'Pending'),
+(6, 6, 6, '20250418', 'Málaga', 'Confirmed'),
+(7, 7, 7, '20250425', 'Granada', 'Cancelled'),
+(8, 8, 8, '20250430', 'Zaragoza', 'Confirmed');
+Tabla: general_ledger
+sql
+Copy
+Edit
+INSERT INTO general_ledger (id, reservation_id, amount, payment_method, paid) VALUES
+(4, 4, 220.00, 'Credit Card', TRUE),
+(5, 5, 180.00, 'PayPal', FALSE),
+(6, 6, 250.00, 'Bank Transfer', TRUE),
+(7, 7, 190.00, 'Cash', FALSE),
+(8, 8, 300.00, 'Credit Card', TRUE);
