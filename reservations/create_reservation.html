@@ -1,0 +1,17 @@
+<form method="POST">
+    {% csrf_token %}
+    <label for="chef_id">Chef:</label>
+    <select name="chef_id">
+        {% for chef in chefs %}
+        <option value="{{ chef.id }}">{{ chef.name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="date">Fecha:</label>
+    <input type="datetime-local" name="date" required>
+    <br>
+    <label for="location">Ubicación:</label>
+    <input type="text" name="location" required>
+    <br>
+    <input type="submit" value="Reservar">
+</form>
