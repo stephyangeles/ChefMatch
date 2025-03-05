@@ -6,7 +6,3 @@ class SpecialtySerializer(serializers.ModelSerializer):
         model = Specialty
         fields = '__all__'
 
-class ReservationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Reservation
-        fields = '__all__'

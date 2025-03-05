@@ -44,6 +44,3 @@ class SpecialtyViewSet(viewsets.ModelViewSet):
     serializer_class = SpecialtySerializer
 
 
-class ReservationViewSet(viewsets.ModelViewSet):
-    queryset = Reservation.objects.all()
-    serializer_class = ReservationSerializer
