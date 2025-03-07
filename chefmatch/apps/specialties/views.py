@@ -2,7 +2,7 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Specialty, Reservation
-from .serializers import SpecialtySerializer, ReservationSerializer
+from .serializers import SpecialtySerializer
 
 @api_view(['GET', 'POST'])
 def item_list(request):

@@ -1,4 +1,4 @@
-from .models import Specialty, Reservation
+from .models import Specialty
 from rest_framework import serializers
 
 class SpecialtySerializer(serializers.ModelSerializer):
