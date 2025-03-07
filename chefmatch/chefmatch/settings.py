@@ -41,9 +41,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+<<<<<<< HEAD
     "apps.users",
     "apps.reservations",
     "apps.chefs",
+=======
+    #"apps.users",
+    "apps.reservations",
+    #"apps.chefs",
+>>>>>>> 29e395885ea19eca3288f93d41400ed20ff449cf
     #"apps.ledger",
     "apps.specialties",
     "rest_framework",

@@ -2,7 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User 
 from apps.chef.models import Chef
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 29e395885ea19eca3288f93d41400ed20ff449cf
 class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
