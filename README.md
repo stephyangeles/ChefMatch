@@ -77,6 +77,42 @@ chefmatch/
    python manage.py runserver
    ```
 
+## Initialize Streamlit
+
+Follow these steps to set up and run the project:
+
+### Install Dependencies
+Make sure you have Python installed, then install Streamlit:
+
+```sh
+pip install streamlit
+```
+
+### Run the Application
+Navigate to the project directory and run:
+
+```sh
+streamlit run client/main.py
+```
+
+### Open in Browser
+Once the command runs successfully, Streamlit will automatically open the application in your browser.  
+If it doesn’t, copy and paste the displayed URL (usually `http://localhost:8501/`) into your browser.
+
+## 🗂️ Project Structure
+
+```
+🗂 client
+ ├── 🗂 assets
+ │   ├── 🗂 logos
+ │   │   ├── ChefMatch-logoblanco.png
+ │   ├── 🗂 icons
+ │   │   ├── icons-chef-1.png
+ │   │   ├── icons-chef-2.png
+ │   │   └── icons-chef-3.png
+ └── main.py  # Streamlit application entry point
+```
+
 ## API Endpoints
 
 (Note: These are example endpoints. Adjust according to your actual implementation)
