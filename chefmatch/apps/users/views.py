@@ -1,6 +1,7 @@
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.shortcuts import get_object_or_404
 from .models import User
 from .serializers import UserSerializer
 
@@ -20,10 +21,7 @@ def user_list(request):
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def user_detail(request, pk):
-    try:
-        user = User.objects.get(pk=pk)
-    except User.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+    user = get_object_or_404(User, pk=pk)
 
     if request.method == 'GET':
         serializer = UserSerializer(user)
@@ -39,7 +37,7 @@ def user_detail(request, pk):
     elif request.method == 'DELETE':
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
+    
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
