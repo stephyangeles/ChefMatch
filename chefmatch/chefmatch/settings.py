@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "apps.users",
-    #"apps.reservations",
+    "apps.reservations",
     "apps.chefs",
     #"apps.ledger",
     "apps.specialties",
