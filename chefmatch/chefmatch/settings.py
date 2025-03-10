@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     "apps.users",
     "apps.reservations",
     "apps.chefs",
-    #"apps.ledger",
+    "apps.ledger",
     "apps.specialties",
     "rest_framework",
 ]
