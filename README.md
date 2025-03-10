@@ -82,25 +82,25 @@ chefmatch/
 
 Follow these steps to set up and run the project:
 
-### Install Dependencies
+1.Install Dependencies
 Make sure you have Python installed, then install Streamlit:
 
 ```sh
 pip install streamlit
 ```
 
-### Run the Application
+2.Run the Application
 Navigate to the project directory and run:
 
 ```sh
 streamlit run client/main.py
 ```
 
-### Open in Browser
+3.Open in Browser
 Once the command runs successfully, Streamlit will automatically open the application in your browser.  
 If it doesn’t, copy and paste the displayed URL (usually `http://localhost:8501/`) into your browser.
 
-## 🗂️ Project Structure
+Project Structure
 
 ```
 🗂 client
