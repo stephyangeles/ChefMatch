@@ -23,6 +23,7 @@ ChefMatch aims to revolutionize the way people experience gourmet cooking. Our p
 - Booking system
 
 ## Project Structure
+```
 chefmatch/
 │
 ├── chefmatch/            # Django project directory
@@ -44,7 +45,7 @@ chefmatch/
 ├── pyproject.toml        # Poetry configuration file
 ├── poetry.lock
 └── README.md
-
+```
 ## Setup
 
 1. Install [Python 3.12](https://www.python.org/downloads/)
