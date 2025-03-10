@@ -5,7 +5,7 @@ def navbar(page_name, show_reservations=True, show_staff=True, show_logout=False
 
     # Display the logo
     with col1:
-        st.image("client_streamlit/assets/src/logos/ChefMatch-horiz-blanco.png", use_container_width=True)
+        st.image("client/assets/logos/ChefMatch-horiz-blanco.png", use_container_width=True)
 
     # Navigation links
     with col2:
