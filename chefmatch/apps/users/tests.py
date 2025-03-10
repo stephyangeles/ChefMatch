@@ -1,7 +1,7 @@
 from .models import User
 from django.test import TestCase
 
-class UserTestCase(TestCase):
+class SpecialtiesTestCase(TestCase):
     def setUp(self):
         # Create a user for testing
         self.user = User.objects.create(name="John Doe", email="john@example.com", telephone="123")
